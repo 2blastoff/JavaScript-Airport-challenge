@@ -18,7 +18,6 @@ Airport.prototype.isFull = function(){
   return this.planes.length >= this.CAPACITY ? true : false;
 };
 
-
 Airport.prototype.takeoff = function(plane){
   var weather = this.isWeather();
   if (weather === true){
@@ -29,7 +28,6 @@ Airport.prototype.takeoff = function(plane){
     return "Bad weather, can't take off";
   }
 };
-
 
 Airport.prototype.isWeather = function() {
   return [true,false][Math.floor(Math.random() * 2)];

@@ -26,7 +26,6 @@ describe ('Airport', function(){
     expect(airport1.takeoff(plane1)).toEqual("Bad weather, can't take off");
   });
 
-
   it('makes the plane take off', function(){
     spyOn(airport1, "isWeather").and.returnValue(true);
     airport1.takeoff(plane2);
@@ -37,7 +36,5 @@ describe ('Airport', function(){
     spyOn(airport1, "isWeather").and.returnValue(false);
     expect(airport1.land(plane1)).toEqual("Bad weather, can't land");
   });
-
-
 
 });
